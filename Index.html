@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fun Portfolio</title>
+    <style>
+        /* This is CSS - the "paint" of your website */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff6b6b;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 50px; /* Rounded buttons */
+            background-color: #ff8787;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #fa5252;
+            transform: scale(1.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 40px;
+            border-radius: 30px; /* Big rounded corners */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        h1 { color: #4dadf7; font-size: 3rem; }
+        h2 { color: #51cf66; font-size: 2.5rem; }
+
+        /* Page Colors */
+        #about { background-color: #e7f5ff; }
+        #projects { background-color: #ebfbee; }
+        #resume { background-color: #fff4e6; }
+        #contact { background-color: #f3f0ff; }
+
+        /* Project Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            border: 3px solid #51cf66;
+        }
+
+        /* Fun Contact Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #845ef7;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h1>Hi, I'm [Your Name]! 👋</h1>
+            <p>I am a high school student who just started my coding journey. I love building things and learning how the internet works! I enjoy pizza, video games, and figuring out why my code isn't working.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Cool Projects 🚀</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Number Guesser</h3>
+                    <p>A fun game I made using logic!</p>
+                </div>
+                <div class="card">
+                    <h3>To-Do List</h3>
+                    <p>Helping people stay organized.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="container">
+            <h2>My Experience 📝</h2>
+            <div style="text-align: left;">
+                <p><strong>Education:</strong> Awesome High School (Class of 202X)</p>
+                <p><strong>Skills:</strong> HTML, CSS, Learning Fast, Being Awesome</p>
+                <p><strong>Interests:</strong> Web Design, Robotics, Chess</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Talk! 📧</h2>
+            <p>If you want to collaborate or just say hi, feel free to reach out!</p>
+            <p>Email: <strong>hello@mywebsite.com</strong></p>
+            <a href="mailto:hello@mywebsite.com" class="btn">Send Me an Email</a>
+        </div>
+    </section>
+
+</body>
+</html>
