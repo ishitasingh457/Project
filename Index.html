@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Ishita Singh | Portfolio</title>
     <style>
-        /* This is CSS - the "paint" of your website */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -32,7 +31,7 @@
             text-decoration: none;
             font-weight: bold;
             padding: 10px 20px;
-            border-radius: 50px; /* Rounded buttons */
+            border-radius: 50px;
             background-color: #ff8787;
             transition: 0.3s;
         }
@@ -53,14 +52,14 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             background: white;
             padding: 40px;
-            border-radius: 30px; /* Big rounded corners */
+            border-radius: 30px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
-        h1 { color: #4dadf7; font-size: 3rem; }
+        h1 { color: #4dadf7; font-size: 3rem; margin-bottom: 10px; }
         h2 { color: #51cf66; font-size: 2.5rem; }
 
         /* Page Colors */
@@ -69,22 +68,27 @@
         #resume { background-color: #fff4e6; }
         #contact { background-color: #f3f0ff; }
 
-        /* Project Cards */
+        /* Project Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .card {
             background: #fff;
-            padding: 20px;
-            border-radius: 20px;
-            border: 3px solid #51cf66;
+            padding: 25px;
+            border-radius: 25px;
+            border: 4px solid #51cf66;
+            transition: transform 0.2s;
         }
 
-        /* Fun Contact Button */
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Buttons */
         .btn {
             display: inline-block;
             margin-top: 20px;
@@ -94,6 +98,22 @@
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .drive-btn {
+            background-color: #fab005; /* Yellow for Google Drive vibe */
+            margin-top: 40px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .drive-btn:hover { background-color: #f59f00; }
+
+        .about-text {
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -109,16 +129,11 @@
     <section id="about">
         <div class="container">
             <h1>Hi, I'm Ishita Singh! 👋</h1>
-            <p> Welcome to my page! Iam currently a Sophomore at Emerald High School in Dublin, CA–To learn more about me read below: 
-
-Some of my goals include becoming an Electrical Engineer or a Software Engineer.I want to focus on areas where innovation can lead to real improvements. This means I will study subjects like power management and machine learning algorithms. I plan to achieve this by earning a Bachelor of Science in Electrical Engineering or Computer Science from a competitive school. While in college, I will participate in research projects and co-op programs to gain practical experience and build my technical skills. My decision to pursue this field comes from being inspired by my parents, both software engineers. Watching them work on meaningful projects motivates me to achieve similar goals.
-
-Additionally my Resume shows my strong skills in Software Development and Leadership. As part of the software team in and in Robotics FTC competitor team, I learned how to write and debug code under pressure. I currently conduct research at a Silicon Valley lab and plan to present my work at the CCIR Cambridge Symposium this summer. My ability to discuss complex issues is demonstrated by my success as a quarter finalist in the UC Berkeley Cal Invitational for Varsity Speech and Debate. Additionally, I serve as Outreach Director for the STEM organization Girls Power the World, where I helped organize seminars that reached over 9.3k people.
-
-These experiences have helped me develop important professional qualities like perseverance and reliability. My ongoing technical work and research highlight my ability to think critically and solve problems. For example, as a Brand Ambassador for MySocialEdge, a non-profit organization, I published over twelve articles and connected with hundreds of people. This improved my communication and outreach skills, allowing me to explain complex concepts clearly. Also, my role as a Peer Mentor during my computer science internship at Building-U and my commitment to tutoring a student show my dedication and reliability in meeting responsibilities. Thank you for reviewing my qualifications and goals. I encourage you to explore the rest of my site to learn more about my background and professional interests.
-
-In general, my background in technical research, leadership, and community outreach has taught me a lot and strengthened my desire to succeed in engineering. The consistent application of my skills in computer science is evident in my accomplishments. Thank you for reading this, and I invite you to explore the rest of my site to learn more about me.
-</p>
+            <div class="about-text">
+                <p>Welcome to my page! I am currently a Sophomore at Emerald High School in Dublin, CA. Some of my goals include becoming an Electrical Engineer or a Software Engineer where innovation leads to real improvements. I plan to achieve this by earning a Bachelor of Science from a competitive school, inspired by my parents who are both software engineers.</p>
+                
+                <p>My background includes writing and debugging code under pressure for an FTC Robotics team, conducting research at the Mountain View lab, and serving as Outreach Director for Girls Power the World. I'm also a quarter-finalist in Varsity Speech and Debate, which helps me communicate complex ideas clearly.</p>
+            </div>
         </div>
     </section>
 
@@ -128,13 +143,18 @@ In general, my background in technical research, leadership, and community outre
             <div class="grid">
                 <div class="card">
                     <h3>Act Fast Project</h3>
-                    <p>A fun game I made using logic!</p>
-                </div>
+                    <p>This App is called ACT fast and designed to educate people about emergencies that may happen. We picked 4 Emergencies: Flooding, Earthquake,Fire,Intruder. Users will first face the introduction screen and then the Option screen where they can pick what disaster they want to learn about, depending on what they pick-they will each be taken to a different screen where there are key details and important facts about what to do in a situation of an emergency. Once they are done reading up on it, they will click on a button that takes them to a quiz where they can test their knowledge!This app was  developed using MIT App Inventor, using a block-based coding system to manage the app's logic. To make the home screen dynamic, I integrated an API that fetches and displays live weather data, like temperature and humidity based on the user's location. I used Layout components to organize the different emergency categories, such as Fire, Earthquake, Flood, and Lockdown, ensuring each had its own dedicated information page. For the interactive quizzes, I programmed Conditional Logic (If/Then blocks) to check if the user selected the correct checkboxes; this allows the app to trigger "Success" messages when answers are right or "Error" alerts if a question is missed or answered incorrectly. Finally, I used Notifier components to give users instant feedback, making the learning process feel like a real.</p>
+
+
                 <div class="card">
-                    <h3>To-Do List</h3>
-                    <p>Helping people stay organized.</p>
+                    <h3>Interview questionnaire app </h3>
+                    <p>This Questionnaire app Is an interview based design. It asks questions relating to the school community such as “How can we improve our school culture and sense of community?”.The user will either type or record their answer by clicking on a button and it will automatically get typed into the textbox for the app. Additionally the user will also be asked to say a date, once they click on the date button, another calendar type page will appear where they can select the date. For the developer of the app, they can retrieve the info database, clear the database as well as save to csv.  I used nested If/Then/Else blocks to check multiple conditions at once; for example, one block checks if all checkboxes are empty using "or" logic, and if they are, it triggers a Notifier to tell the user to answer all questions. For the CSV export function that uses a For Each loop to grab all the tags from the database and format them into a text file so the data can be opened in a spreadsheet later..</p>
                 </div>
             </div>
+
+            <a href="https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-hero-goto">
+                🎥 View Project Videos on Google Drive
+            </a>
         </div>
     </section>
 
@@ -143,8 +163,9 @@ In general, my background in technical research, leadership, and community outre
             <h2>My Experience 📝</h2>
             <div style="text-align: left;">
                 <p><strong>Education:</strong> Emerald High School (Class of 2028)</p> 
-                <p><strong>Skills:</strong> HTML, CSS, Learning Fast, Being Awesome</p>
-                <p><strong>Interests:</strong> Web Design, Robotics, Cooking</p>
+                <p><strong>Leadership:</strong> Outreach Director (Girls Power the World), Brand Ambassador (MySocialEdge)</p>
+                <p><strong>Technical Skills:</strong> HTML, CSS, Software Development, Robotics (FTC)</p>
+                <p><strong>Achievements:</strong> Quarter-finalist at UC Berkeley Cal Invitational (Speech & Debate)</p>
             </div>
         </div>
     </section>
@@ -153,11 +174,10 @@ In general, my background in technical research, leadership, and community outre
         <div class="container">
             <h2>Let's Talk! 📧</h2>
             <p>If you want to collaborate or just say hi, feel free to reach out!</p>
-            <p>Email: <strong>hello@mywebsite.com</strong></p>
-            <a href="mailto:hello@mywebsite.com" class="btn">Send Me an Email</a>
+            <p>Email: <strong>ishita@example.com</strong></p>
+            <a href="mailto:ishita@example.com" class="btn">Send Me an Email</a>
         </div>
     </section>
 
 </body>
-
 </html>
