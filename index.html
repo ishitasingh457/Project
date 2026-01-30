@@ -41,7 +41,6 @@
             transform: scale(1.1);
         }
 
-        /* Section Styling */
         section {
             padding: 80px 20px;
             min-height: 80vh;
@@ -62,82 +61,56 @@
         h1 { color: #4dadf7; font-size: 3rem; margin-bottom: 10px; }
         h2 { color: #51cf66; font-size: 2.5rem; }
 
-        /* Page Colors */
+        /* Page Backgrounds */
         #about { background-color: #e7f5ff; }
         #projects { background-color: #ebfbee; }
         #resume { background-color: #fff4e6; }
         #contact { background-color: #f3f0ff; }
 
-        /* Project Grid */
+        /* Project Grid - Changed to 1 column for better button visibility on mobile/small screens */
         .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 30px;
+            text-align: left;
         }
 
         .card {
             background: #fff;
-            padding: 25px;
+            padding: 30px;
             border-radius: 25px;
             border: 4px solid #51cf66;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s;
-            text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+        .card h3 { color: #2b8a3e; margin-top: 0; }
 
-        .card h3 {
-            margin-top: 0;
-            color: #2b8a3e;
-            text-align: center;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #444;
-        }
-
-        /* Buttons and Links */
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            justify-content: center;
-        }
-
-        .btn {
+        /* The Button Styling */
+        .project-link {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #845ef7;
-            color: white;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #845ef7; /* Bright Purple */
+            color: white !important; /* Forces text to be white */
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 0.85rem;
             transition: 0.3s;
-            text-align: center;
         }
 
-        .btn:hover {
+        .project-link:hover {
             background-color: #7048e8;
-            opacity: 0.9;
+            transform: scale(1.05);
         }
 
-        .drive-btn {
-            background-color: #fab005;
+        .drive-footer {
             margin-top: 40px;
-            padding: 15px 30px;
-            font-size: 1rem;
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
         }
-
-        .drive-btn:hover { background-color: #f59f00; }
 
         .about-text {
             text-align: justify;
@@ -160,7 +133,7 @@
             <h1>Hi, I'm Ishita Singh! 👋</h1>
             <div class="about-text">
                 <p>Welcome to my page! I am currently a Sophomore at Emerald High School in Dublin, CA. Some of my goals include becoming an Electrical Engineer or a Software Engineer where innovation leads to real improvements. I plan to achieve this by earning a Bachelor of Science from a competitive school, inspired by my parents who are both software engineers.</p>
-                <p>My background includes writing and debugging code under pressure for an FTC Robotics team, conducting research at the Mountain View lab, and serving as Outreach Director for Girls Power the World. I'm also a quarter-finalist in Varsity Speech and Debate, which helps me communicate complex ideas clearly.</p>
+                <p>My background includes writing and debugging code under pressure for an FTC Robotics team, conducting research at the Mountain View lab, and serving as Outreach Director for Girls Power the World.</p>
             </div>
         </div>
     </section>
@@ -173,23 +146,23 @@
                 <div class="card">
                     <h3>Act Fast Project</h3>
                     <p>Designed to educate people about emergencies like Flooding, Earthquakes, Fires, and Intruders. Built with MIT App Inventor, it uses block-based logic, API weather integration, and Conditional Logic for interactive quizzes to test emergency readiness.</p>
-                    <div class="btn-group">
-                        <a href="https://drive.google.com/file/d/1-YUXLn_y0mupc1rSTrPLXPxvQoZICtfk/view?usp=sharing" target="_blank" class="btn">View App File</a>
-                    </div>
+                    <a href="https://drive.google.com/file/d/1-YUXLn_y0mupc1rSTrPLXPxvQoZICtfk/view?usp=sharing" target="_blank" class="project-link">
+                        🔗 Click to View Act Fast File
+                    </a>
                 </div>
 
                 <div class="card">
                     <h3>Interview Questionnaire App</h3>
-                    <p>An interview-based app focused on school culture. It features voice-to-text recording, calendar integration, and a database system that allows developers to export user feedback as CSV files using For-Each loops and nested logic.</p>
-                    <div class="btn-group">
-                        <a href="https://drive.google.com/file/d/1Vy3blVMa7XhJzBpaw_ESTHVZ0UASp1o0/view?usp=sharing" target="_blank" class="btn">View App File</a>
-                    </div>
+                    <p>An interview-based app focused on school culture. It features voice-to-text recording, calendar integration, and a database system that allows developers to export user feedback as CSV files.</p>
+                    <a href="https://drive.google.com/file/d/1Vy3blVMa7XhJzBpaw_ESTHVZ0UASp1o0/view?usp=sharing" target="_blank" class="project-link">
+                        🔗 Click to View Interview App File
+                    </a>
                 </div>
 
             </div>
 
-            <a href="https://drive.google.com/drive/home" target="_blank" class="btn drive-btn">
-                🎥 View All Project Videos on Google Drive
+            <a href="https://drive.google.com/drive/home" target="_blank" class="drive-footer">
+                🎥 View Project Videos on Google Drive
             </a>
         </div>
     </section>
@@ -199,7 +172,6 @@
             <h2>My Experience 📝</h2>
             <div style="text-align: left;">
                 <p><strong>Education:</strong> Emerald High School (Class of 2028)</p> 
-                <p><strong>Leadership:</strong> Outreach Director (Girls Power the World), Brand Ambassador (MySocialEdge)</p>
                 <p><strong>Technical Skills:</strong> MIT App Inventor, API Integration, HTML, CSS, Robotics (FTC)</p>
             </div>
         </div>
@@ -208,13 +180,8 @@
     <section id="contact">
         <div class="container">
             <h2>Let's Talk! 📧</h2>
-            <p>If you want to collaborate or just say hi, feel free to reach out!</p>
             <p>Email: <strong>ish.singh5710@gmail.com</strong></p>
-            <a href="mailto:ish.singh5710@gmail.com" class="btn">Send Me an Email</a>
-        </div>
-    </section>
+            <a href="mailto:ish.singh571
 
-</body>
-</html>
 
 
